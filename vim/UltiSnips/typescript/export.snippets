@@ -1,0 +1,15 @@
+snippet req "Require a nodejs module" !b
+var $1 = require('$2');
+endsnippet
+
+snippet exp "Export nodejs module" !b
+module.exports = $1;
+endsnippet
+
+snippet ex "export something (ES6)" !b
+export {$1};
+endsnippet
+
+snippet exd "export default (ES6)" !b
+export default $1;
+endsnippet

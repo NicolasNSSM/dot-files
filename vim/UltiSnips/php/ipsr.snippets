@@ -1,0 +1,10 @@
+snippet ipsr "PSR0 class"
+<?php
+
+namespace ${3:`!v substitute(substitute(expand("%:h"), '\v^\w+\/(\u)', '\1', ''), '\/', '\', 'g')`};
+
+interface ${2:`!v expand('%:t:r', 'myInterface')`}
+{
+    ${1}
+}
+endsnippet

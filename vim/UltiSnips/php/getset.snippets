@@ -1,0 +1,13 @@
+snippet getset "Generate getter and setter" !b
+public function get${1/(.*)/\u$1/}()
+{
+    return \$this->$1;
+}
+
+public function set${1/(.*)/\u$1/}(\$$1)
+{
+    \$this->$1 = \$$1;
+
+    return \$this;
+}
+endsnippet

@@ -1,0 +1,22 @@
+[core]
+	excludesfile = ~/.gitignore
+	editor = vim
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch -a
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	amend = commit -a --amend
+[user]
+	email = nicolas.nussbaum@knplabs.com
+	name = NicolasNSSM
+[push]
+	default = simple
+[init]
+	templatedir = ~/dot-files/git_template
+[merge]
+	tool = meld
+[mergetool]
+	keepBackup = false

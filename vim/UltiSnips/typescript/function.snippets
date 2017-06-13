@@ -1,0 +1,45 @@
+snippet fu "function" !b
+function $1($2) {
+	$0
+}
+endsnippet
+
+snippet afu "async function" !b
+async function $1($2) {
+	$0
+}
+endsnippet
+
+snippet efu "export function" !b
+export$3 function $1($2) {
+	$0
+}
+endsnippet
+
+snippet eafu "Export async functions" !b
+export$3 async function $1($2) {
+	$0
+}
+endsnippet
+
+snippet gfu "generator function" !b
+function* $1($2) {
+	$0
+}
+endsnippet
+
+snippet agfu "async generator function" !b
+async function* $1($2)
+endsnippet
+
+snippet egfu "export generator function" !b
+export$3 function* $1($2) {
+	$0
+}
+endsnippet
+
+snippet eagfu "export async generator function" !b
+export$3 async function* $1($2) {
+	$0
+}
+endsnippet

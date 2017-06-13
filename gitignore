@@ -1,0 +1,7 @@
+.idea/
+*.orig
+*~
+*.tags
+.tmux.conf
+*.swp
+*.swo

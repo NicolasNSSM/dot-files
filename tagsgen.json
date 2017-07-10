@@ -15,14 +15,6 @@
             "--languages=php"
         ]
     },
-    "gherkin": {
-        "path": "features",
-        "extension": "feature",
-        "file": "tags_gherkin.tags",
-        "args": [
-            "--languages=gherkin"
-        ]
-    },
     "js-lib": {
         "path": "lib",
         "extension": "js",

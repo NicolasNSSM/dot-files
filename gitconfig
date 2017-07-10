@@ -17,6 +17,6 @@
 [init]
 	templatedir = ~/dot-files/git_template
 [merge]
-	tool = meld
+	tool = vimdiff
 [mergetool]
 	keepBackup = false

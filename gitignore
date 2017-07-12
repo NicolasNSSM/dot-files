@@ -5,3 +5,4 @@
 .tmux.conf
 *.swp
 *.swo
+*debug.log

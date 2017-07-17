@@ -15,6 +15,10 @@ HISTSIZE=500000
 SAVEHIST=500000
 HISTFILE=~/.zsh_history
 
+# Key binding
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
 # Use modern completion system
 autoload -Uz compinit
 compinit

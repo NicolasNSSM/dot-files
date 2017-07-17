@@ -22,16 +22,27 @@ export TERM=xterm-256color
 
 eval $(thefuck --alias f)
 
+HISTSIZE=500000
+SAVEHIST=500000
+HISTFILE=~/.zsh_history
+
+# Key binding
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
+#DOCKERIZED TOOLS
+alias php71='docker run --rm -it -v "$PWD":/opt -w /opt php:7.1 php'
+alias php56='docker run --rm -it -v "$PWD":/opt -w /opt php:5.6 php'
+alias phpstan='find src spec tests features -name "*.php" | xargs -n1 -P0 php -l && docker run --rm -v $PWD:/app phpstan/phpstan analyse --level 7 /app/src'
+
 #ALIASES
 alias meteo='curl -4 http://wttr\.in/nantes'
 alias moon='curl -4 http://wttr\.in/moon'
 alias nload='nload -u M -m'
-alias tmx='tmux attach -t  $(echo ${PWD##*/} | sed s/[^a-zA-Z0-9]//g) || tmux new -s $(echo ${PWD##*/} | sed s/[^a-zA-Z0-9]//g) tmux source-file .tmux.conf'
+alias tmx='tmux attach -t $(echo ${PWD##*/} | sed "s/[^a-zA-Z0-9]//g") || tmux new -s $(echo ${PWD##*/} | sed "s/[^a-zA-Z0-9]//g") tmux source-file .tmux.conf'
 alias ll='ls -lah'
 
 alias docker-cleanup='docker stop $(docker ps -aq); \
 		docker rm -vf $(docker ps -aq); \
 		docker rmi -f $(docker images -q); \
 		docker volume ls -qf dangling=true | xargs -r docker volume rm'
-
-alias php-checker='find src spec tests features -name "*.php" | xargs -n1 -P0 php -l && docker run --rm -v $PWD:/app phpstan/phpstan analyse /app/src'

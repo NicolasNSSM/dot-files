@@ -182,3 +182,15 @@ if executable('ag')
   endif
 let g:ctrlp_use_caching = 0
 endif
+
+"
+" Tagbar
+"
+nmap <F8> :TagbarToggle<CR>
+
+"
+" Ack
+"
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif

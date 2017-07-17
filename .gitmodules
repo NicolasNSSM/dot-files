@@ -37,3 +37,9 @@
 [submodule "vim/pack/plugins/start/tabular"]
 	path = vim/pack/plugins/start/tabular
 	url = git@github.com:godlygeek/tabular.git
+[submodule "vim/pack/plugins/start/tagbar"]
+	path = vim/pack/plugins/start/tagbar
+	url = git@github.com:majutsushi/tagbar.git
+[submodule "vim/pack/plugins/start/ack"]
+	path = vim/pack/plugins/start/ack
+	url = git@github.com:mileszs/ack.vim.git

@@ -74,21 +74,14 @@ map TT <C-T>
 
 " Navigate throught words and lines
 nmap <C-h> b
-nmap <C-left> b
 nmap <C-j> 5j
-nmap <C-down> 5j
 nmap <C-k> 5k
-nmap <C-up> 5k
 nmap <C-l> w
-nmap <C-right> w
 vmap <C-h> b
-vmap <C-left> b
 vmap <C-j> 5j
-vmap <C-down> 5j
 vmap <C-k> 5k
-vmap <C-up> 5k
 vmap <C-l> w
-vmap <C-right> w
+
 "
 " Lusty
 "

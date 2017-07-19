@@ -6,13 +6,10 @@
 --exclude="*/_*data/*"
 --totals=yes
 --tag-relative=yes
---PHP-kinds=+cf
 --languages=php,js,ts
 
---regex-php=/abstract class ([^ ]*)/\1/c/
---regex-php=/interface ([^ ]*)/\1/c/
---regex-php=/trait ([^ ]*)/\1/c/
---regex-php=/(public |static |abstract |protected |private )+ function +([^ \(]*)/\2/f/
+--PHP-kinds=+cf
+--regex-PHP=/trait\s+([^ ]+)/\1/t/
 
 --langdef=ts
 --langmap=ts:.ts

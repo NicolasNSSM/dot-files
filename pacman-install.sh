@@ -30,7 +30,6 @@ groupadd docker
 sudo usermod -aG docker $USER
 sudo ln -s /usr/bin/node /usr/bin/nodejs
 sudo npm install tagsgen -g
-chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone https://github.com/powerline/fonts.git && sh ./fonts/install.sh && rm -rf fonts
 sed -i 's/ZSH_THEME\=\"robbyrussell/ZSH_THEME\=\"agnoster/g' ~/.zshrc

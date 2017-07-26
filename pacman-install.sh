@@ -1,5 +1,10 @@
 #!/usr/bin/sh
 
+if [[ ! -L ~/.vimrc ]] ; then
+    echo 'Install dotfiles first'
+    exit
+fi
+
 #UPDATE
 sudo pacman-mirrors -g
 sudo pacman-optimize && sync

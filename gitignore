@@ -6,3 +6,4 @@
 *.swp
 *.swo
 *debug.log
+docker/override.yml

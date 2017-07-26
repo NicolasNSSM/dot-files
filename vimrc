@@ -87,6 +87,9 @@ vmap <C-j> 5j
 vmap <C-k> 5k
 vmap <C-l> w
 
+" Quit buffer keeping the split
+map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
+
 "
 " Lusty
 "

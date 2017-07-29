@@ -3,7 +3,7 @@ Installation
 
 Clone the repository:
 ```
-    git clone repo ~/dot-files
+    git clone git@github.com/NicolasNSSM/dot-files.git repo ~/dot-files
 ```
 Create symbolic links:
 ```

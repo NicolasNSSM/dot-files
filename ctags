@@ -9,7 +9,8 @@
 --languages=php,js,ts
 
 --PHP-kinds=+cf
---regex-PHP=/trait\s+([^ ]+)/\1/t/
+--regex-PHP=/trait\s+([^ ]+)/\1/t,trait/
+--regex-PHP=/const\s+([^ ]+)/\1/v,const/
 
 --langdef=ts
 --langmap=ts:.ts

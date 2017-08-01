@@ -69,6 +69,8 @@ set undolevels=1000                 " use many levels of undo
 set noundofile
 set autoread                        " Auto reload current file if externally changed
 set updatetime=250
+set timeoutlen=1000 
+set ttimeoutlen=0
 "execute 'highlight Visual cterm=reverse'
 
 nnoremap <tab> <c-w><c-w>
@@ -76,6 +78,10 @@ nnoremap <tab> <c-w><c-w>
 " Explore tags list for the word under the cursor
 map tt g<C-]>
 map TT <C-T>
+" do a grep search on the selected text
+vmap <leader>f y:grep -r "<C-r>""
+" do a grep search on the word under cursor
+nmap <leader>f :grep -r "<C-r><C-w>"
 
 " Navigate throught words and lines
 nmap <C-h> b
@@ -89,6 +95,11 @@ vmap <C-l> w
 
 " Quit buffer keeping the split
 map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
+
+" :grep uses ag now
+if executable('ag')
+    set grepprg=ag\ --nogroup\ --nocolor
+endif
 
 "
 " Lusty

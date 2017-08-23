@@ -96,6 +96,12 @@ vmap <C-l> w
 " Quit buffer keeping the split
 map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
 
+" Fast split resize
+nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
+nnoremap <silent> <Leader>> :exe "vertical resize " . (winwidth(0) * 3/2)<CR>
+nnoremap <silent> <Leader>< :exe "vertical resize " . (winwidth(0) * 2/3)<CR>
+
 " :grep uses ag now
 if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor

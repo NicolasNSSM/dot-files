@@ -9,6 +9,7 @@
 	unstage = reset HEAD --
 	last = log -1 HEAD
 	amend = commit -a --amend
+    ds = diff --stat master@{1} master
 [user]
 	email = nicolas.nussbaum@knplabs.com
 	name = NicolasNSSM

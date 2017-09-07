@@ -25,6 +25,8 @@ endif
 "set termguicolors
 colorscheme jellybeans
 let g:jellybeans_use_lowcolor_black = 0
+autocmd InsertEnter * hi LineNr ctermfg=4 ctermbg=232
+autocmd InsertLeave * hi LineNr ctermfg=59 ctermbg=232
 
 set expandtab
 set tabstop=4
@@ -73,6 +75,10 @@ set timeoutlen=1000
 set ttimeoutlen=0
 "execute 'highlight Visual cterm=reverse'
 
+" Make CTRL+C trigger InsertLeave
+inoremap <C-c> <Esc>
+
+" Change panel focus with tab
 nnoremap <tab> <c-w><c-w>
 
 " Explore tags list for the word under the cursor
@@ -92,6 +98,11 @@ vmap <C-h> b
 vmap <C-j> 5j
 vmap <C-k> 5k
 vmap <C-l> w
+" force to never use arrow for navigation !
+nmap <Up> <nop>
+nmap <Down> <nop>
+nmap <Left> <nop>
+nmap <Right> <nop>
 
 " Quit buffer keeping the split
 map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>

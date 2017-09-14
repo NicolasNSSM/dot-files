@@ -5,3 +5,7 @@ endsnippet
 snippet logb
 console.log.bind(console)
 endsnippet
+
+snippet stack "stack trace" !b
+console.log("\n-------------- STACK TRACE: ${1}-------------\n", (new Error()).stack, "\n-------------- !STACK TRACE -------------\n");
+endsnippet

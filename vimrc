@@ -84,10 +84,15 @@ nnoremap <tab> <c-w><c-w>
 " Explore tags list for the word under the cursor
 map tt g<C-]>
 map TT <C-T>
+
 " do a grep search on the selected text
-vmap <leader>f y:grep -r "<C-r>""
-" do a grep search on the word under cursor
-nmap <leader>f :grep -r "<C-r><C-w>"
+if executable('ag')
+    vmap <leader>f y:Ack "<C-r>""
+    nmap <leader>f :Ack "<C-r><C-w>"
+else
+    vmap <leader>f y:grep -r "<C-r>""
+    nmap <leader>f :grep -r "<C-r><C-w>"
+endif
 
 " Navigate throught words and lines
 nmap <C-h> b

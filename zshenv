@@ -47,3 +47,4 @@ alias docker-cleanup='docker stop $(docker ps -aq); \
 		docker rm -vf $(docker ps -aq); \
 		docker rmi -f $(docker images -q); \
 		docker volume ls -qf dangling=true | xargs -r docker volume rm'
+export GPG_TTY=$(tty)

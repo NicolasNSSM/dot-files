@@ -11,8 +11,9 @@
 	amend = commit -a --amend
     ds = diff --stat master@{1} master
 [user]
-	email = nicolas.nussbaum@knplabs.com
+	email = nnussbaum@gmail.com
 	name = NicolasNSSM
+	signingkey = EDCF7D08844E7077
 [push]
 	default = simple
 [init]

@@ -23,6 +23,7 @@ community/redshift \
 community/the_silver_searcher \
 community/thefuck \
 community/tmux \
+community/shellcheck \
 extra/chromium \
 extra/ctags \
 extra/php \
@@ -38,6 +39,7 @@ sudo npm install tagsgen -g
 git clone git@github.com:powerline/fonts.git && sh ./fonts/install.sh && rm -rf fonts
 git clone git@github.com:robbyrussell/oh-my-zsh.git ~/.oh-my-zsh && cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 sed -i 's/ZSH_THEME\=\"robbyrussell/ZSH_THEME\=\"agnoster/g' ~/.zshrc
+sed -i 's/^plugins=(/plugins=(\n  colored-man-pages\n  docker-compose\n  docker/g' ~/.zshrc
 for doc in ~/dot-files/vim/pack/plugins/start/**/doc ; do vim -u NONE -c "helptags $doc" -c q ; done
 
 #AUTOSTART

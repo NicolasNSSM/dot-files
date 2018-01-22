@@ -27,6 +27,7 @@ colorscheme jellybeans
 let g:jellybeans_use_lowcolor_black = 0
 autocmd InsertEnter * hi LineNr ctermfg=4 ctermbg=232
 autocmd InsertLeave * hi LineNr ctermfg=59 ctermbg=232
+let &colorcolumn=80
 
 set expandtab
 set tabstop=4

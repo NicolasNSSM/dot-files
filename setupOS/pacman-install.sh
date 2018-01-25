@@ -28,7 +28,7 @@ extra/chromium \
 extra/ctags \
 extra/php \
 extra/ruby \
-extra/vim \
+extra/gvim \
 extra/zsh
 
 #CONFIG

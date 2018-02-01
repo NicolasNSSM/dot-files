@@ -24,6 +24,7 @@ community/the_silver_searcher \
 community/thefuck \
 community/tmux \
 community/shellcheck \
+community/tldr \
 extra/chromium \
 extra/ctags \
 extra/php \

@@ -131,7 +131,7 @@ vmap <C-k> 5k
 vmap <C-l> w
 
 " Quit buffer keeping the split
-map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
+nnoremap <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
 
 " Fast split resize
 nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
@@ -251,7 +251,7 @@ if executable('ag')
 endif
 
 "
-" junegunn/fzf
+" junegunn/fzf.vim
 "
 set rtp+=~/.fzf
 let g:fzf_colors = {
@@ -269,4 +269,4 @@ let g:fzf_colors = {
   \ 'header':  ['fg', 'Comment']
   \ }
 nnoremap <C-p> :Files<CR>
-nnoremap <C-m> :History<CR>
+nnoremap <leader>mr :History<CR>

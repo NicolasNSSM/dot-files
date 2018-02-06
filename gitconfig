@@ -13,7 +13,7 @@
 [user]
 	email = nnussbaum@gmail.com
 	name = NicolasNSSM
-	signingkey = EDCF7D08844E7077
+	signingkey = 5084C9A171DD0B43
 [push]
 	default = simple
 [init]
@@ -22,3 +22,5 @@
 	tool = vimdiff
 [mergetool]
 	keepBackup = false
+[commit]
+    gpgsign = true

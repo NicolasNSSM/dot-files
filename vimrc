@@ -11,6 +11,7 @@ set incsearch     " Highlight matches as you type
 set hlsearch      " Highlight matches
 set cursorcolumn  " Highlight the column the cursor is in
 set ttimeoutlen=0 " Escape Insert Mode faster
+set autoread      " Auto reload current file if externally changed
 
 " Change gutter color in insert mode
 autocmd InsertEnter * hi LineNr ctermfg=4 ctermbg=232
@@ -170,6 +171,8 @@ Plug 'sjbach/lusty'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
+Plug 'maralla/completor.vim', { 'dir': '~/.vim/plugged/completor.vim', 'do': 'make js' }
+Plug 'posva/vim-vue'
 
 call plug#end()
 
@@ -270,3 +273,13 @@ let g:fzf_colors = {
   \ }
 nnoremap <C-p> :Files<CR>
 nnoremap <leader>mr :History<CR>
+
+"
+" maralla/completor.vim
+"
+let g:completor_node_binary = '/usr/bin/nodejs'
+
+"
+" ntpeters/vim-better-whitespace
+"
+autocmd BufEnter * EnableStripWhitespaceOnSave

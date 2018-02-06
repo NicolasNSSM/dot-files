@@ -170,6 +170,7 @@ Plug 'sjbach/lusty'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
+Plug 'maralla/completor.vim', { 'dir': '~/.vim/plugged/completor.vim', 'do': 'make js' }
 
 call plug#end()
 
@@ -270,3 +271,8 @@ let g:fzf_colors = {
   \ }
 nnoremap <C-p> :Files<CR>
 nnoremap <leader>mr :History<CR>
+
+"
+" maralla/completor.vim
+"
+let g:completor_node_binary = '/usr/bin/nodejs'

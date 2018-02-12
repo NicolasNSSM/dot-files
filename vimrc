@@ -155,24 +155,24 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'airblade/vim-gitgutter'
-Plug 'arnaud-lb/vim-php-namespace'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'godlygeek/tabular'
-Plug 'itchyny/lightline.vim'
-Plug 'leafgarland/typescript-vim'
-Plug 'mileszs/ack.vim'
-Plug 'nanotech/jellybeans.vim'
-Plug 'ntpeters/vim-better-whitespace'
-Plug 'scrooloose/nerdtree'
-Plug 'sirver/ultisnips'
-Plug 'sjbach/lusty'
-Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-fugitive'
-Plug 'w0rp/ale'
-Plug 'maralla/completor.vim', { 'dir': '~/.vim/plugged/completor.vim', 'do': 'make js' }
-Plug 'posva/vim-vue'
+Plug 'airblade/vim-gitgutter'                                                            " Shows a git diff in the gutter
+Plug 'arnaud-lb/vim-php-namespace'                                                       " Manage 'use' statements automatically.
+Plug 'godlygeek/tabular'                                                                 " Text filtering and alignment
+Plug 'itchyny/lightline.vim'                                                             " Light and configurable statusline/tabline
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }                        " Command-line fuzzy finder
+Plug 'junegunn/fzf.vim'                                                                  " FZF support for vim
+Plug 'leafgarland/typescript-vim'                                                        " Typescript syntax highlighting
+Plug 'maralla/completor.vim', { 'dir': '~/.vim/plugged/completor.vim', 'do': 'make js' } " Asynchronous code completion framework
+Plug 'mileszs/ack.vim'                                                                   " Search tool
+Plug 'nanotech/jellybeans.vim'                                                           " Colorscheme
+Plug 'ntpeters/vim-better-whitespace'                                                    " Delete useless whitespaces
+Plug 'posva/vim-vue'                                                                     " Vuejs syntax highlighting
+Plug 'scrooloose/nerdtree'                                                               " File system explorer
+Plug 'sirver/ultisnips'                                                                  " Snippet solution
+Plug 'sjbach/lusty'                                                                      " Manage files and buffers
+Plug 'tpope/vim-eunuch'                                                                  " helpers for UNIX, eg: `:Rename` `:Delete`
+Plug 'tpope/vim-fugitive'                                                                " Git wrappern eg: `:Gblame`, `:Gdiff`
+Plug 'w0rp/ale'                                                                          " Asynchronous Lint Engine
 
 call plug#end()
 
@@ -277,7 +277,7 @@ nnoremap <leader>mr :History<CR>
 "
 " maralla/completor.vim
 "
-let g:completor_node_binary = '/usr/bin/nodejs'
+let g:completor_node_binary = '/usr/bin/node'
 
 "
 " ntpeters/vim-better-whitespace

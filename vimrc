@@ -12,6 +12,7 @@ set hlsearch      " Highlight matches
 set cursorcolumn  " Highlight the column the cursor is in
 set ttimeoutlen=0 " Escape Insert Mode faster
 set autoread      " Auto reload current file if externally changed
+set noswapfile    " Use an SCM instead of swap files
 
 " Change gutter color in insert mode
 autocmd InsertEnter * hi LineNr ctermfg=4 ctermbg=232

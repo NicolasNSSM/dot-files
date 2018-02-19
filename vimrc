@@ -124,12 +124,12 @@ endif
 
 " Navigate throught words and lines
 nmap <C-h> b
-nmap <C-j> 5j
-nmap <C-k> 5k
+nmap <C-j> 7j
+nmap <C-k> 7k
 nmap <C-l> w
 vmap <C-h> b
-vmap <C-j> 5j
-vmap <C-k> 5k
+vmap <C-j> 7j
+vmap <C-k> 7k
 vmap <C-l> w
 
 " Quit buffer keeping the split
@@ -174,6 +174,7 @@ Plug 'sjbach/lusty'                                                             
 Plug 'tpope/vim-eunuch'                                                                  " helpers for UNIX, eg: `:Rename` `:Delete`
 Plug 'tpope/vim-fugitive'                                                                " Git wrappern eg: `:Gblame`, `:Gdiff`
 Plug 'w0rp/ale'                                                                          " Asynchronous Lint Engine
+Plug 'jiangmiao/auto-pairs'                                                              " Insert or delete brackets, parens, quotes in pair.
 
 call plug#end()
 
@@ -284,3 +285,8 @@ let g:completor_node_binary = '/usr/bin/node'
 " ntpeters/vim-better-whitespace
 "
 autocmd BufEnter * EnableStripWhitespaceOnSave
+
+"
+" w0rp/ale
+"
+nnoremap <leader>ale :ALEDetail<CR>

@@ -37,11 +37,11 @@ alias php56='docker run --rm -it -v "$PWD":/opt -w /opt php:5.6 php'
 alias phpstan='find src spec tests features -name "*.php" | xargs -n1 -P0 php -l && docker run --rm -v $PWD:/app phpstan/phpstan analyse --level 7 /app/src'
 
 #ALIASES
+alias apps="find ~/Desktop -name 'chrome*.desktop' -exec '{}' \;"
 alias meteo='curl -4 http://wttr\.in/nantes'
 alias moon='curl -4 http://wttr\.in/moon'
 alias nload='nload -u M -m'
 alias tmx='tmux attach -t $(echo ${PWD##*/} | sed "s/[^a-zA-Z0-9]//g") || tmux new -s $(echo ${PWD##*/} | sed "s/[^a-zA-Z0-9]//g") tmux source-file .tmux.conf'
-alias ll='ls -lah'
 
 alias docker-cleanup='docker stop $(docker ps -aq); \
 		docker rm -vf $(docker ps -aq); \

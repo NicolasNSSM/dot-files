@@ -1,4 +1,4 @@
-Installation 
+Installation
 ============
 
 Clone the repository:
@@ -8,6 +8,6 @@ Clone the repository:
 Create symbolic links:
 ```
     for f in $(ls -1 ~/dot-files); do ln -fs ~/dot-files/$f ~/.$f; done
-    ln -fs ~/dot-files/terminalrc ~/.config/xfce4/terminal/terminalrc
+    cp -vrs ~/dot-files/.config/* ~/.config
 ```
 Done!

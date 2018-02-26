@@ -174,7 +174,6 @@ Plug 'sjbach/lusty'                                                             
 Plug 'tpope/vim-eunuch'                                                                  " helpers for UNIX, eg: `:Rename` `:Delete`
 Plug 'tpope/vim-fugitive'                                                                " Git wrappern eg: `:Gblame`, `:Gdiff`
 Plug 'w0rp/ale'                                                                          " Asynchronous Lint Engine
-Plug 'jiangmiao/auto-pairs'                                                              " Insert or delete brackets, parens, quotes in pair.
 
 call plug#end()
 

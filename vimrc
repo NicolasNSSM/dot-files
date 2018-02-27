@@ -289,3 +289,5 @@ autocmd BufEnter * EnableStripWhitespaceOnSave
 " w0rp/ale
 "
 nnoremap <leader>ale :ALEDetail<CR>
+let g:ale_sign_warning = '>>'
+highlight ALEWarningSign ctermfg=172

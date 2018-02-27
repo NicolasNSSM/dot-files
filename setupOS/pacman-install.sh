@@ -1,6 +1,6 @@
-#!/usr/bin/sh
+#!/usr/bin/bash
 
-if [[ ! -L ~/.vimrc ]] ; then
+if [ ! -L ~/.vimrc ] ; then
     echo 'Install dotfiles first'
     exit
 fi
@@ -39,7 +39,7 @@ sudo yaourt -S --noconfirm \
 
 #CONFIG
 groupadd docker
-sudo usermod -aG docker $USER
+sudo usermod -aG docker "$USER"
 sudo ln -s /usr/bin/node /usr/bin/nodejs
 sudo npm install -g tagsgen eslint stylelint
 composer global require hirak/prestissimo
@@ -51,7 +51,7 @@ sed -i 's/^plugins=(/plugins=(\n  colored-man-pages\n  docker-compose\n  docker/
 #AUTOSTART
 sudo systemctl enable docker
 systemctl --user enable redshift-gtk.service
-chsh -s `which zsh`
+chsh -s "which zsh"
 
 #DID YOU TRY TURNING IT OFF AND ON AGAIN?
 sudo reboot

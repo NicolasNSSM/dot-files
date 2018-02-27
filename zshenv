@@ -37,6 +37,8 @@ alias php71='docker run --rm -it -v "$PWD":/opt -w /opt php:7.1 php'
 alias php56='docker run --rm -it -v "$PWD":/opt -w /opt php:5.6 php'
 alias phpstan='find src spec tests features -name "*.php" | xargs -n1 -P0 php -l && docker run --rm -v $PWD:/app phpstan/phpstan analyse --level 7 /app/src'
 
+alias i3cheatsheet='egrep ^bind ~/.config/i3/config | cut -d '\'' '\'' -f 2- | sed '\''s/ /\t/'\'' | column -ts $'\''\t'\'' | pr -2 -w 145 -t | less'
+
 #ALIASES
 alias apps="find ~/Desktop -name 'chrome*.desktop' -exec '{}' \;"
 alias meteo='curl -4 http://wttr\.in/nantes'

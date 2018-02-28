@@ -174,6 +174,7 @@ Plug 'sjbach/lusty'                                                             
 Plug 'tpope/vim-eunuch'                                                                  " helpers for UNIX, eg: `:Rename` `:Delete`
 Plug 'tpope/vim-fugitive'                                                                " Git wrappern eg: `:Gblame`, `:Gdiff`
 Plug 'w0rp/ale'                                                                          " Asynchronous Lint Engine
+Plug 'DataWraith/auto_mkdir'                                                             " Create dir tree on save if it doesnt exist
 
 call plug#end()
 
@@ -289,5 +290,9 @@ autocmd BufEnter * EnableStripWhitespaceOnSave
 " w0rp/ale
 "
 nnoremap <leader>ale :ALEDetail<CR>
-let g:ale_sign_warning = '>>'
 highlight ALEWarningSign ctermfg=172
+let g:ale_sign_warning = '>>'
+let g:ale_completion_enabled = 1
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\}

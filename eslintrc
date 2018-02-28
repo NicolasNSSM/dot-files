@@ -15,7 +15,7 @@
         "no-class-assign": 2,
         "no-compare-neg-zero": 2,
         "no-cond-assign": 2,
-        "no-console": 2,
+        "no-console": 1,
         "no-const-assign": 2,
         "no-constant-condition": 2,
         "no-control-regex": 2,
@@ -52,14 +52,14 @@
         "no-unsafe-finally": 2,
         "no-unsafe-negation": 2,
         "no-unused-labels": 2,
-        "no-unused-vars": 2,
+        "no-unused-vars": [1, { "vars": "all" }],
         "no-useless-escape": 2,
         "require-yield": 2,
         "use-isnan": 2,
         "valid-typeof": 2,
         "comma-dangle": [1, "always-multiline"],
-        "no-multi-spaces": ["error", { ignoreEOLComments: true }],
-        "no-multiple-empty-lines": ["error", { "max": 1, "maxBOF": 0, "maxEOF": 0}]
+        "no-multi-spaces": [2, { ignoreEOLComments: true }],
+        "no-multiple-empty-lines": [2, { "max": 1, "maxBOF": 0, "maxEOF": 0}]
     },
     "env": {
         "browser": true,

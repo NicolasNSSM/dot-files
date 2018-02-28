@@ -1,0 +1,35 @@
+snippet desc "Describe" !b
+describe('$1', () => {
+	$0
+});
+endsnippet
+
+snippet adesc "Asynchronous describe" !b
+describe('$1', async (next) => {
+	$0
+});
+endsnippet
+
+snippet it "It" !b
+it('$1', () => {
+	$0
+});
+endsnippet
+
+snippet ait "async it" !b
+it('$1', async (next) => {
+	$0
+});
+endsnippet
+
+snippet befo "before each" !b
+beforeEach(() => {
+	$0
+});
+endsnippet
+
+snippet abefo "async before each" !b
+beforeEach(acyns (next) => {
+	$0
+});
+endsnippet

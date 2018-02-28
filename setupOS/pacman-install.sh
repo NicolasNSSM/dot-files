@@ -37,11 +37,15 @@ sudo pacman -S --noconfirm \
 sudo yaourt -S --noconfirm \
     nord-xfce-terminal
 
+sudo npm install -g \
+    tagsgen \
+    eslint \
+    stylelint stylelint-config-standard
+
 #CONFIG
 groupadd docker
 sudo usermod -aG docker "$USER"
 sudo ln -s /usr/bin/node /usr/bin/nodejs
-sudo npm install -g tagsgen eslint stylelint
 composer global require hirak/prestissimo
 git clone git@github.com:powerline/fonts.git && sh ./fonts/install.sh && rm -rf fonts
 git clone git@github.com:robbyrussell/oh-my-zsh.git ~/.oh-my-zsh && cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc

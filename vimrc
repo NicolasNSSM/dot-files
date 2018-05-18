@@ -1,18 +1,23 @@
-let mapleader=',' " Use the comma as leader
-set hidden        " Allow switch beetween modified buffers
-set number        " Show line numbers.
-set ignorecase    " Case-insensitive searching.
-set smartcase     " But case-sensitive if expression contains a capital letter.
-set expandtab     " Converts tabs to spaces
-set tabstop=4     " Number of spaces a tab count for
-set softtabstop=4 " Number of spaces a tab count for when editing
-set shiftwidth=4  " Number of spaces an autoindent count for
-set incsearch     " Highlight matches as you type
-set hlsearch      " Highlight matches
-set cursorcolumn  " Highlight the column the cursor is in
-set ttimeoutlen=0 " Escape Insert Mode faster
-set autoread      " Auto reload current file if externally changed
-set noswapfile    " Use an SCM instead of swap files
+let mapleader=','                         " Use the comma as leader
+let &colorcolumn=80                       " Display the column #80
+set hidden                                " Allow switch beetween modified buffers
+set number                                " Show line numbers.
+set ignorecase                            " Case-insensitive searching.
+set smartcase                             " But case-sensitive if expression contains a capital letter.
+set expandtab                             " Converts tabs to spaces
+set tabstop=4                             " Number of spaces a tab count for
+set softtabstop=4                         " Number of spaces a tab count for when editing
+set shiftwidth=4                          " Number of spaces an autoindent count for
+set incsearch                             " Highlight matches as you type
+set hlsearch                              " Highlight matches
+set cursorcolumn                          " Highlight the column the cursor is in
+set ttimeoutlen=0                         " Escape Insert Mode faster
+set autoread                              " Auto reload current file if externally changed
+set noswapfile                            " Use an SCM instead of swap files
+set encoding=utf-8                        " Sets the character encoding
+set fileencoding=utf-8                    " Sets the character encoding
+set list                                  " Active list mode
+set listchars=nbsp:¬,eol:↩,trail:…,tab:▸▸ " Strings to use in 'list' mode
 
 " Change gutter color in insert mode
 autocmd InsertEnter * hi LineNr ctermfg=4 ctermbg=232
@@ -99,6 +104,9 @@ au FileType python set tags=tags_python.tags
 
 "------------------ KEY MAPPING ------------------
 
+" Unbind help on F1
+:nmap <F1> <nop>
+
 " Make CTRL+C trigger InsertLeave
 inoremap <C-c> <Esc>
 
@@ -115,8 +123,8 @@ nnoremap N Nzz
 
 " Do a grep search on the selected text
 if executable('ag')
-    vmap <leader>f y:Ack "<C-r>""
-    nmap <leader>f :Ack "<C-r><C-w>"
+    vmap <leader>f y:Ack -i "<C-r>""
+    nmap <leader>f :Ack -i "<C-r><C-w>"
 else
     vmap <leader>f y:grep -r "<C-r>""
     nmap <leader>f :grep -r "<C-r><C-w>"
@@ -295,4 +303,5 @@ let g:ale_sign_warning = '>>'
 let g:ale_completion_enabled = 1
 let g:ale_linters = {
 \   'javascript': ['eslint'],
+\   'typescript': ['tslint'],
 \}

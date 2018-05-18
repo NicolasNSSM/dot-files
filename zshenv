@@ -38,8 +38,10 @@ alias php56='docker run --rm -it -v "$PWD":/opt -w /opt php:5.6 php'
 alias phpstan='find src spec tests features -name "*.php" | xargs -n1 -P0 php -l && docker run --rm -v $PWD:/app phpstan/phpstan analyse --level 7 /app/src'
 
 alias i3cheatsheet='egrep ^bind ~/.config/i3/config | cut -d '\'' '\'' -f 2- | sed '\''s/ /\t/'\'' | column -ts $'\''\t'\'' | pr -2 -w 145 -t | less'
+alias battery='upower -i $(upower -e | grep 'BAT') | grep -E "state|time\ to\ full|percentage|capacity"'
 
 #ALIASES
+alias :e="vim"
 alias apps="find ~/Desktop -name 'chrome*.desktop' -exec '{}' \;"
 alias meteo='curl -4 http://wttr\.in/nantes'
 alias moon='curl -4 http://wttr\.in/moon'
@@ -47,7 +49,8 @@ alias nload='nload -u M -m'
 alias tmx='tmux attach -t $(echo ${PWD##*/} | sed "s/[^a-zA-Z0-9]//g") || tmux new -s $(echo ${PWD##*/} | sed "s/[^a-zA-Z0-9]//g") tmux source-file .tmux.conf'
 
 alias docker-cleanup='docker stop $(docker ps -aq); \
-		docker rm -vf $(docker ps -aq); \
-		docker rmi -f $(docker images -q); \
-		docker volume ls -qf dangling=true | xargs -r docker volume rm'
+        docker rm -vf $(docker ps -aq); \
+        docker rmi -f $(docker images -q); \
+        docker network rm $(docker network ls -q); \
+        docker volume ls -qf dangling=true | xargs -r docker volume rm'
 export GPG_TTY=$(tty)

@@ -166,6 +166,9 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'                                                            " Shows a git diff in the gutter
 Plug 'arnaud-lb/vim-php-namespace'                                                       " Manage 'use' statements automatically.
+Plug 'christoomey/vim-sort-motion'                                                       " Sort inline words
+Plug 'DataWraith/auto_mkdir'                                                             " Create dir tree on save if it doesnt exist
+Plug 'editorconfig/editorconfig-vim'                                                     " Respect .editorconfig
 Plug 'godlygeek/tabular'                                                                 " Text filtering and alignment
 Plug 'itchyny/lightline.vim'                                                             " Light and configurable statusline/tabline
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }                        " Command-line fuzzy finder
@@ -182,7 +185,6 @@ Plug 'sjbach/lusty'                                                             
 Plug 'tpope/vim-eunuch'                                                                  " helpers for UNIX, eg: `:Rename` `:Delete`
 Plug 'tpope/vim-fugitive'                                                                " Git wrappern eg: `:Gblame`, `:Gdiff`
 Plug 'w0rp/ale'                                                                          " Asynchronous Lint Engine
-Plug 'DataWraith/auto_mkdir'                                                             " Create dir tree on save if it doesnt exist
 
 call plug#end()
 
@@ -305,3 +307,13 @@ let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'typescript': ['tslint'],
 \}
+
+"
+" editorconfig/editorconfig-vim
+"
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+
+"
+" christoomey/vim-sort-motion
+"
+let g:sort_motion_flags = "ui"

@@ -46,6 +46,7 @@ alias apps="find ~/Desktop -name 'chrome*.desktop' -exec '{}' \;"
 alias meteo='curl -4 http://wttr\.in/nantes'
 alias moon='curl -4 http://wttr\.in/moon'
 alias nload='nload -u M -m'
+alias tmt='tmate attach -t $(echo ${PWD##*/} | sed "s/[^a-zA-Z0-9]//g") || tmate new -s $(echo ${PWD##*/} | sed "s/[^a-zA-Z0-9]//g") tmate source-file .tmux.conf'
 alias tmx='tmux attach -t $(echo ${PWD##*/} | sed "s/[^a-zA-Z0-9]//g") || tmux new -s $(echo ${PWD##*/} | sed "s/[^a-zA-Z0-9]//g") tmux source-file .tmux.conf'
 
 alias docker-cleanup='docker stop $(docker ps -aq); \

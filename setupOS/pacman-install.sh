@@ -20,22 +20,24 @@ sudo pacman -S --noconfirm \
     community/nodejs \
     community/npm \
     community/redshift \
+    community/shellcheck \
     community/the_silver_searcher \
     community/thefuck \
-    community/tmux \
-    community/shellcheck \
     community/tldr \
+    community/tmux \
     extra/chromium \
+    extra/composer \
     extra/ctags \
+    extra/gvim \
+    extra/lsof \
     extra/php \
     extra/ruby \
-    extra/gvim \
-    extra/zsh \
-    extra/composer \
-    extra/yaourt
+    extra/yaourt \
+    extra/zsh
 
 sudo yaourt -S --noconfirm \
-    nord-xfce-terminal
+    nord-xfce-terminal \
+    tmate
 
 sudo npm install -g \
     tagsgen \

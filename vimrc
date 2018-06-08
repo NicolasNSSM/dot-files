@@ -18,6 +18,7 @@ set encoding=utf-8                        " Sets the character encoding
 set fileencoding=utf-8                    " Sets the character encoding
 set list                                  " Active list mode
 set listchars=nbsp:¬,eol:↩,trail:…,tab:▸▸ " Strings to use in 'list' mode
+set t_ut=                                 " Disable Background Color Erase (BCE)
 
 " Change gutter color in insert mode
 autocmd InsertEnter * hi LineNr ctermfg=4 ctermbg=232

@@ -25,6 +25,7 @@ sudo pacman -S --noconfirm \
     community/thefuck \
     community/tldr \
     community/tmux \
+    community/yarn \
     extra/chromium \
     extra/composer \
     extra/ctags \
@@ -39,11 +40,12 @@ sudo yaourt -S --noconfirm \
     nord-xfce-terminal \
     tmate
 
-sudo npm install -g \
+yarn global add \
     tagsgen \
     eslint \
     tslint typescript \
     stylelint stylelint-config-standard
+    elm \
 
 #CONFIG
 groupadd docker

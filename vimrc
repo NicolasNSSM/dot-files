@@ -124,8 +124,8 @@ nnoremap N Nzz
 
 " Do a grep search on the selected text
 if executable('ag')
-    vmap <leader>f y:Ack -i "<C-r>""
-    nmap <leader>f :Ack -i "<C-r><C-w>"
+    vmap <leader>f y:Ack! -i "<C-r>""
+    nmap <leader>f :Ack! -i "<C-r><C-w>"
 else
     vmap <leader>f y:grep -r "<C-r>""
     nmap <leader>f :grep -r "<C-r><C-w>"
@@ -152,7 +152,7 @@ nnoremap <silent> <Leader>< :exe "vertical resize " . (winwidth(0) * 2/3)<CR>
 
 " Make :grep great again
 if executable('ag')
-    set grepprg=ag\ --nogroup\ --nocolor
+    set grepprg=ag\ --group
 endif
 
 "---------------- PLUGINS INSTALL ----------------
@@ -174,6 +174,7 @@ Plug 'godlygeek/tabular'                                                        
 Plug 'itchyny/lightline.vim'                                                             " Light and configurable statusline/tabline
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }                        " Command-line fuzzy finder
 Plug 'junegunn/fzf.vim'                                                                  " FZF support for vim
+Plug 'ElmCast/elm-vim'                                                                   " Elm syntax highlighting and more
 Plug 'leafgarland/typescript-vim'                                                        " Typescript syntax highlighting
 Plug 'maralla/completor.vim', { 'dir': '~/.vim/plugged/completor.vim', 'do': 'make js' } " Asynchronous code completion framework
 Plug 'mileszs/ack.vim'                                                                   " Search tool
@@ -263,7 +264,7 @@ vmap <Leader>\| :Tabularize /\|<CR>
 " mileszs/ack.vim
 "
 if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
+  let g:ackprg = 'ag --group --vimgrep'
 endif
 
 "

@@ -31,6 +31,7 @@ sudo pacman -S --noconfirm \
     extra/ctags \
     extra/gvim \
     extra/lsof \
+    extra/perl-image-exiftool \
     extra/php \
     extra/ruby \
     extra/yaourt \

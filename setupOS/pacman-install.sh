@@ -42,11 +42,12 @@ sudo yaourt -S --noconfirm \
     tmate
 
 yarn global add \
-    tagsgen \
-    eslint \
-    tslint typescript \
-    stylelint stylelint-config-standard
     elm \
+    eslint \
+    import-js \
+    stylelint stylelint-config-standard \
+    tagsgen \
+    tslint typescript
 
 #CONFIG
 groupadd docker

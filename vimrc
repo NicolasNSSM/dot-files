@@ -165,6 +165,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'Galooshi/vim-import-js'                                                            " JS library import helper
 Plug 'airblade/vim-gitgutter'                                                            " Shows a git diff in the gutter
 Plug 'arnaud-lb/vim-php-namespace'                                                       " Manage 'use' statements automatically.
 Plug 'christoomey/vim-sort-motion'                                                       " Sort inline words
@@ -319,3 +320,4 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 " christoomey/vim-sort-motion
 "
 let g:sort_motion_flags = "ui"
+let g:sort_motion = 's'

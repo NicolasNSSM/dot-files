@@ -48,7 +48,7 @@ alias moon='curl -4 http://wttr\.in/moon'
 alias nload='nload -u M -m'
 alias tmt='tmate attach -t $(echo ${PWD##*/} | sed "s/[^a-zA-Z0-9]//g") || tmate new -s $(echo ${PWD##*/} | sed "s/[^a-zA-Z0-9]//g") tmate source-file .tmux.conf'
 alias tmx='tmux attach -t $(echo ${PWD##*/} | sed "s/[^a-zA-Z0-9]//g") || tmux new -s $(echo ${PWD##*/} | sed "s/[^a-zA-Z0-9]//g") tmux source-file .tmux.conf'
-
+exifToFolder='exiftool -o . '\''-Directory<FileModifyDate'\'' '\''-Directory<DateTimeOriginal'\'' -d ./%Y%m%d\ -\ %d%B%Y -r' # Place yourself in the target directory and append the alias with the source folder
 alias docker-cleanup='docker stop $(docker ps -aq); \
         docker rm -vf $(docker ps -aq); \
         docker rmi -f $(docker images -q); \

@@ -1,4 +1,10 @@
 #ENV
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
@@ -6,7 +12,7 @@ export PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:$PATH
 export PATH=~/.bin:$PATH
 export PATH=~/.local/bin:$PATH
 export PATH=~/.composer/vendor/bin:$PATH
-export PATH=$(ruby -rubygems -e "puts Gem.user_dir")/bin:$PATH
+export PATH=$(ruby -r rubygems -e "puts Gem.user_dir")/bin:$PATH
 export PATH=~/workspace/go/bin:$PATH
 export PATH=./node_modules/.bin:$PATH
 export PATH=./vendor/bin:$PATH

@@ -27,26 +27,24 @@ sudo pacman -S --noconfirm \
     community/tmux \
     community/yarn \
     extra/chromium \
-    extra/composer \
-    extra/ctags \
     extra/gvim \
     extra/lsof \
     extra/perl-image-exiftool \
     extra/php \
     extra/ruby \
-    extra/yaourt \
+    extra/yay \
     extra/zsh
 
-sudo yaourt -S --noconfirm \
+sudo yay -S --noconfirm \
     nord-xfce-terminal \
     tmate
 
 yarn global add \
     elm \
     eslint \
+    eslint-plugin-react \
     import-js \
     stylelint stylelint-config-standard \
-    tagsgen \
     tslint typescript
 
 #CONFIG

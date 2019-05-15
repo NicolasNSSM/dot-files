@@ -1,12 +1,23 @@
 {
     "parserOptions": {
-        "ecmaVersion": 8,
+        "ecmaVersion": 6,
         "sourceType": "module",
         "ecmaFeatures": {
             "jsx": true,
             "globalReturn": true,
             "impliedStrict": true,
-            "experimentalObjectRestSpread": true
+        }
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "plugins": [
+        "react"
+    ],
+    "settings": {
+        "react": {
+              "version": "detect"
         }
     },
     "rules": {
@@ -60,7 +71,9 @@
         "comma-dangle": [1, "always-multiline"],
         "no-multi-spaces": [2, { ignoreEOLComments: true }],
         "no-multiple-empty-lines": [2, { "max": 1, "maxBOF": 0, "maxEOF": 0}],
-        "arrow-parens": [1, "as-needed"]
+        "arrow-parens": [1, "as-needed"],
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
     },
     "env": {
         "browser": true,

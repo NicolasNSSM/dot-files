@@ -1,3 +1,5 @@
+let skip_defaults_vim=1                   " Don't use Vim defaults' settings
+"set viminfo=""                            " Do not genrate ~/.viminfo files (MRU, ...)
 let mapleader=','                         " Use the comma as leader
 let &colorcolumn=80                       " Display the column #80
 set hidden                                " Allow switch beetween modified buffers
@@ -19,6 +21,7 @@ set fileencoding=utf-8                    " Sets the character encoding
 set list                                  " Active list mode
 set listchars=nbsp:¬,eol:↩,trail:…,tab:▸▸ " Strings to use in 'list' mode
 set t_ut=                                 " Disable Background Color Erase (BCE)
+set backupcopy=yes                        " Disable safe write
 
 " Change gutter color in insert mode
 autocmd InsertEnter * hi LineNr ctermfg=4 ctermbg=232
@@ -165,17 +168,18 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'DataWraith/auto_mkdir'                                                             " Create dir tree on save if it doesnt exist
+Plug 'ElmCast/elm-vim'                                                                   " Elm syntax highlighting and more
 Plug 'Galooshi/vim-import-js'                                                            " JS library import helper
 Plug 'airblade/vim-gitgutter'                                                            " Shows a git diff in the gutter
 Plug 'arnaud-lb/vim-php-namespace'                                                       " Manage 'use' statements automatically.
 Plug 'christoomey/vim-sort-motion'                                                       " Sort inline words
-Plug 'DataWraith/auto_mkdir'                                                             " Create dir tree on save if it doesnt exist
 Plug 'editorconfig/editorconfig-vim'                                                     " Respect .editorconfig
+Plug 'flowtype/vim-flow'                                                                 " Facebook Flow monitor
 Plug 'godlygeek/tabular'                                                                 " Text filtering and alignment
 Plug 'itchyny/lightline.vim'                                                             " Light and configurable statusline/tabline
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }                        " Command-line fuzzy finder
 Plug 'junegunn/fzf.vim'                                                                  " FZF support for vim
-Plug 'ElmCast/elm-vim'                                                                   " Elm syntax highlighting and more
 Plug 'leafgarland/typescript-vim'                                                        " Typescript syntax highlighting
 Plug 'maralla/completor.vim', { 'dir': '~/.vim/plugged/completor.vim', 'do': 'make js' } " Asynchronous code completion framework
 Plug 'mileszs/ack.vim'                                                                   " Search tool
@@ -300,16 +304,18 @@ let g:completor_node_binary = '/usr/bin/node'
 " ntpeters/vim-better-whitespace
 "
 autocmd BufEnter * EnableStripWhitespaceOnSave
+let g:strip_whitespace_confirm=0
 
 "
 " w0rp/ale
 "
 nnoremap <leader>ale :ALEDetail<CR>
+nnoremap <leader>esl :ALEFix eslint<CR>
 highlight ALEWarningSign ctermfg=172
 let g:ale_sign_warning = '>>'
 let g:ale_completion_enabled = 1
 let g:ale_linters = {
-\   'javascript': ['eslint'],
+\   'javascript': ['eslint', 'flow'],
 \   'typescript': ['tslint'],
 \}
 
@@ -322,4 +328,9 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 " christoomey/vim-sort-motion
 "
 let g:sort_motion_flags = "ui"
-let g:sort_motion = 's'
+let g:sort_motion = '<leader>s'
+
+"
+" flowtype/vim-flow
+"
+let g:flow#enable = 0

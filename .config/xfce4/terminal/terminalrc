@@ -16,7 +16,7 @@ MiscTabCloseMiddleClick=TRUE
 MiscTabPosition=GTK_POS_TOP
 MiscHighlightUrls=TRUE
 ScrollingLines=999999
-BackgroundDarkness=0,900000
+BackgroundDarkness=0.000000
 ScrollingOnOutput=FALSE
 MiscBellUrgent=FALSE
 MiscMouseWheelZoom=TRUE
@@ -37,4 +37,7 @@ ColorPalette=#3B4252;#BF616A;#A3BE8C;#EBCB8B;#81A1C1;#B48EAD;#88C0D0;#E5E9F0;#4C
 ColorBold=#D8DEE9
 TabActivityColor=#88C0D0
 ColorBoldUseDefault=FALSE
+MiscShowRelaunchDialog=TRUE
+MiscNewTabAdjacent=FALSE
+FontName=Monospace 14
 

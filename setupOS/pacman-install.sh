@@ -14,7 +14,9 @@ sudo pacman -Syyu --noconfirm
 mkdir -p ~/Workspace/{KNPLabs,NSSM,FOSS}
 
 #INSTALL
-sudo pacman -S --noconfirm \
+sudo pacman -S extra/yay
+
+sudo yay -S --noconfirm \
     community/docker \
     community/docker-compose \
     community/nodejs \
@@ -32,10 +34,7 @@ sudo pacman -S --noconfirm \
     extra/perl-image-exiftool \
     extra/php \
     extra/ruby \
-    extra/yay \
-    extra/zsh
-
-sudo yay -S --noconfirm \
+    extra/zsh \
     nord-xfce-terminal \
     tmate
 
@@ -61,7 +60,7 @@ sed -i 's/^plugins=(/plugins=(\n  colored-man-pages\n  docker-compose\n  docker\
 #AUTOSTART
 sudo systemctl enable docker
 systemctl --user enable redshift-gtk.service
-chsh -s "which zsh"
+chsh -s $(which zsh)
 
 #DID YOU TRY TURNING IT OFF AND ON AGAIN?
 sudo reboot

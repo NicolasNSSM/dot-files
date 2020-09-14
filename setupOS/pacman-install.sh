@@ -19,6 +19,7 @@ sudo pacman -S extra/yay
 sudo yay -S --noconfirm \
     community/docker \
     community/docker-compose \
+    community/neovim \
     community/nodejs \
     community/npm \
     community/redshift \
@@ -34,6 +35,7 @@ sudo yay -S --noconfirm \
     extra/perl-image-exiftool \
     extra/php \
     extra/ruby \
+    extra/xclip \
     extra/zsh \
     nord-xfce-terminal \
     tmate
@@ -44,7 +46,11 @@ yarn global add \
     eslint-plugin-react \
     import-js \
     stylelint stylelint-config-standard \
-    tslint typescript
+    tslint typescript \
+    instant-markdown-d
+
+gem install neovim
+python -m pip install --user --upgrade pynvim
 
 #CONFIG
 groupadd docker

@@ -19,6 +19,7 @@ export PATH=./vendor/bin:$PATH
 export PATH=./bin:$PATH
 export PATH=./app:$PATH
 export PATH=./:$PATH
+export PATH="$(yarn global bin):$PATH"
 export GOPATH=~/Workspace/
 export CDPATH=~/Workspace/:$CDPATH
 export EDITOR=vim
@@ -47,14 +48,14 @@ alias i3cheatsheet='egrep ^bind ~/.config/i3/config | cut -d '\'' '\'' -f 2- | s
 alias battery='upower -i $(upower -e | grep 'BAT') | grep -E "state|time\ to\ full|percentage|capacity"'
 
 #ALIASES
-alias :e="vim"
+alias :e="nvim"
 alias apps="find ~/Desktop -name 'chrome*.desktop' -exec '{}' \;"
 alias meteo='curl -4 http://wttr\.in/nantes'
 alias moon='curl -4 http://wttr\.in/moon'
 alias nload='nload -u M -m'
 alias tmt='tmate attach -t $(echo ${PWD##*/} | sed "s/[^a-zA-Z0-9]//g") || tmate new -s $(echo ${PWD##*/} | sed "s/[^a-zA-Z0-9]//g") tmate source-file .tmux.conf'
 alias tmx='tmux attach -t $(echo ${PWD##*/} | sed "s/[^a-zA-Z0-9]//g") || tmux new -s $(echo ${PWD##*/} | sed "s/[^a-zA-Z0-9]//g") tmux source-file .tmux.conf'
-exifToFolder='exiftool -o . '\''-Directory<FileModifyDate'\'' '\''-Directory<DateTimeOriginal'\'' -d ./%Y%m%d\ -\ %d%B%Y -r' # Place yourself in the target directory and append the alias with the source folder
+alias exifToFolder='exiftool -o . '\''-Directory<FileModifyDate'\'' '\''-Directory<DateTimeOriginal'\'' -d ./%Y%m%d\ -\ %d%B%Y -r' # Place yourself in the target directory and suffix with `.`
 alias docker-cleanup='docker stop $(docker ps -aq); \
         docker rm -vf $(docker ps -aq); \
         docker rmi -f $(docker images -q); \

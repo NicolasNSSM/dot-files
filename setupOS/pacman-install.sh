@@ -26,13 +26,14 @@ sudo pacman -S --noconfirm \
     community/tldr \
     community/tmux \
     community/yarn \
+    community/yay \
+    core/make \
     extra/chromium \
     extra/gvim \
     extra/lsof \
     extra/perl-image-exiftool \
     extra/php \
     extra/ruby \
-    extra/yay \
     extra/zsh
 
 sudo yay -S --noconfirm \
@@ -61,7 +62,7 @@ sed -i 's/^plugins=(/plugins=(\n  colored-man-pages\n  docker-compose\n  docker\
 #AUTOSTART
 sudo systemctl enable docker
 systemctl --user enable redshift-gtk.service
-chsh -s "which zsh"
+chsh -s $(which zsh)
 
 #DID YOU TRY TURNING IT OFF AND ON AGAIN?
 sudo reboot

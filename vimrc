@@ -240,9 +240,20 @@ nnoremap <leader>esl :ALEFix eslint<CR>
 highlight ALEWarningSign ctermfg=172
 let g:ale_sign_warning = '>>'
 let g:ale_completion_enabled = 1
+
+let g:ale_linter_aliases = {'javascript': ['css', 'javascript'],'jsx': ['css', 'javascript']}
+
 let g:ale_linters = {
-\   'javascript': ['eslint', 'flow'],
-\   'typescript': ['tslint'],
+\ 'javascript': ['stylelint', 'eslint'],
+\ 'jsx': ['stylelint', 'eslint'],
+\ 'vue': ['stylelint', 'eslint'],
+\}
+
+let g:ale_fixers = {
+\ 'javascript': ['stylelint', 'eslint'],
+\ 'jsx': ['stylelint', 'eslint'],
+\ 'vue': ['stylelint', 'eslint'],
+\ 'css': ['stylelint'],
 \}
 
 "

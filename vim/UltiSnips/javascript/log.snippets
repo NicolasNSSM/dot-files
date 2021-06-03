@@ -14,6 +14,6 @@ snippet cw|
 console.warn(${1}) ||
 endsnippet
 
-snippet stack "stack trace" !b
-console.log("\n-------------- STACK TRACE: ${1}-------------\n", (new Error()).stack, "\n-------------- !STACK TRACE -------------\n");
+snippet trace "stack trace" !b
+console.log('\n-------------- STACK TRACE: ${1}-------------\n', (new Error()).stack, '\n-------------- !STACK TRACE -------------\n');
 endsnippet

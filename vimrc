@@ -241,16 +241,21 @@ highlight ALEWarningSign ctermfg=172
 let g:ale_sign_warning = '>>'
 let g:ale_completion_enabled = 1
 
-let g:ale_linter_aliases = {'javascript': ['css', 'javascript'],'jsx': ['css', 'javascript']}
+let g:ale_linter_aliases = {
+\ 'javascript': ['css', 'javascript'],
+\ 'jsx': ['css', 'javascript'],
+\}
 
 let g:ale_linters = {
 \ 'javascript': ['stylelint', 'eslint'],
+\ 'typescript': ['eslint'],
 \ 'jsx': ['stylelint', 'eslint'],
 \ 'vue': ['stylelint', 'eslint'],
 \}
 
 let g:ale_fixers = {
 \ 'javascript': ['stylelint', 'eslint'],
+\ 'typescript': ['eslint'],
 \ 'jsx': ['stylelint', 'eslint'],
 \ 'vue': ['stylelint', 'eslint'],
 \ 'css': ['stylelint'],

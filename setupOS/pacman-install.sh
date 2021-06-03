@@ -53,7 +53,6 @@ groupadd docker
 sudo usermod -aG docker "$USER"
 sudo ln -s /usr/bin/node /usr/bin/nodejs
 sudo sh -c 'echo "fs.inotify.max_user_watches=524288" >> /etc/sysctl.d/42-max-user-watches.conf'
-composer global require hirak/prestissimo
 git clone git@github.com:powerline/fonts.git && sh ./fonts/install.sh && rm -rf fonts
 git clone git@github.com:robbyrussell/oh-my-zsh.git ~/.oh-my-zsh && cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 sed -i 's/ZSH_THEME\=\"robbyrussell/ZSH_THEME\=\"agnoster/g' ~/.zshrc

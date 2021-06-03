@@ -27,7 +27,7 @@ sudo pacman -S --noconfirm \
     community/tmux \
     community/yarn \
     community/yay \
-    core/make \
+    base-devel \
     extra/gvim \
     extra/lsof \
     extra/perl-image-exiftool \
@@ -56,7 +56,7 @@ sudo sh -c 'echo "fs.inotify.max_user_watches=524288" >> /etc/sysctl.d/42-max-us
 git clone git@github.com:powerline/fonts.git && sh ./fonts/install.sh && rm -rf fonts
 git clone git@github.com:robbyrussell/oh-my-zsh.git ~/.oh-my-zsh && cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 sed -i 's/ZSH_THEME\=\"robbyrussell/ZSH_THEME\=\"agnoster/g' ~/.zshrc
-sed -i 's/^plugins=(/plugins=(\n  colored-man-pages\n  docker-compose\n  docker\n  web-search/g' ~/.zshrc
+sed -i 's/^plugins=(/plugins=(\n  colored-man-pages\n  docker-compose\n  docker\n  web-search\n /g' ~/.zshrc
 
 #AUTOSTART
 sudo systemctl enable docker

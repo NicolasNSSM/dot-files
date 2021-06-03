@@ -28,7 +28,6 @@ sudo pacman -S --noconfirm \
     community/yarn \
     community/yay \
     core/make \
-    extra/chromium \
     extra/gvim \
     extra/lsof \
     extra/perl-image-exiftool \
@@ -37,6 +36,7 @@ sudo pacman -S --noconfirm \
     extra/zsh
 
 sudo yay -S --noconfirm \
+    google-chrome \
     nord-xfce-terminal \
     tmate
 

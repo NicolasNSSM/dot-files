@@ -47,7 +47,7 @@ alias i3cheatsheet='egrep ^bind ~/.config/i3/config | cut -d '\'' '\'' -f 2- | s
 alias battery='upower -i $(upower -e | grep 'BAT') | grep -E "state|time\ to\ full|percentage|capacity"'
 
 #ALIASES
-alias :e="vim"
+alias :e="nvim"
 alias apps="find ~/Desktop -name 'chrome*.desktop' -exec '{}' \;"
 alias meteo='curl -4 http://wttr\.in/nantes'
 alias moon='curl -4 http://wttr\.in/moon'

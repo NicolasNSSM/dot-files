@@ -17,6 +17,7 @@ mkdir -p ~/Workspace/{KNPLabs,NSSM,FOSS}
 sudo pacman -S --noconfirm \
     community/docker \
     community/docker-compose \
+    community/neovim \
     community/nodejs \
     community/npm \
     community/redshift \
@@ -33,6 +34,7 @@ sudo pacman -S --noconfirm \
     extra/perl-image-exiftool \
     extra/php \
     extra/ruby \
+    extra/xclip \
     extra/zsh
 
 sudo yay -S --noconfirm \
@@ -47,6 +49,11 @@ yarn global add \
     import-js \
     stylelint stylelint-config-standard \
     tslint typescript
+
+gem install neovim
+
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 #CONFIG
 groupadd docker

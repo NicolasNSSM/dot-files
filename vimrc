@@ -244,18 +244,20 @@ let g:ale_completion_enabled = 1
 let g:ale_linter_aliases = {
 \ 'javascript': ['css', 'javascript'],
 \ 'jsx': ['css', 'javascript'],
+\ 'ts': ['typescript'],
+\ 'tsx': ['typescript'],
 \}
 
 let g:ale_linters = {
 \ 'javascript': ['stylelint', 'eslint'],
-\ 'typescript': ['eslint'],
+\ 'typescript': ['stylelint', 'eslint'],
 \ 'jsx': ['stylelint', 'eslint'],
 \ 'vue': ['stylelint', 'eslint'],
 \}
 
 let g:ale_fixers = {
 \ 'javascript': ['stylelint', 'eslint'],
-\ 'typescript': ['eslint'],
+\ 'typescript': ['stylelint', 'eslint'],
 \ 'jsx': ['stylelint', 'eslint'],
 \ 'vue': ['stylelint', 'eslint'],
 \ 'css': ['stylelint'],

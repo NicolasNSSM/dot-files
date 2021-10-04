@@ -1,0 +1,4 @@
+{
+    "stylelintplus.cssInJs": true,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true
+}

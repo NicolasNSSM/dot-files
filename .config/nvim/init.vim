@@ -109,12 +109,13 @@ function! s:show_documentation()
   endif
 endfunction
 let g:coc_global_extensions = [
-  \ 'coc-tsserver',
-  \ 'coc-json',
-  \ 'coc-html',
   \ 'coc-eslint',
+  \ 'coc-html',
+  \ 'coc-json',
+  \ 'coc-snippets',
   \ 'coc-styled-components',
   \ 'coc-stylelintplus',
+  \ 'coc-tsserver',
   \ ]
 
 "

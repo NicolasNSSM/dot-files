@@ -33,6 +33,7 @@ sudo pacman -S --noconfirm \
     extra/lsof \
     extra/perl-image-exiftool \
     extra/php \
+    extra/python-pip \
     extra/ruby \
     extra/xclip \
     extra/zsh
@@ -51,6 +52,7 @@ yarn global add \
     tslint typescript
 
 gem install neovim
+pip install neovim
 
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'

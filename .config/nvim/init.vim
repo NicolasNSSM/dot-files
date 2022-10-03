@@ -26,6 +26,7 @@ set backupcopy=yes                        " Disable safe write
 " Change gutter color in insert mode
 autocmd InsertEnter * hi LineNr ctermfg=4 ctermbg=232
 autocmd InsertLeave * hi LineNr ctermfg=59 ctermbg=232
+autocmd VimEnter * PlugUpdate && :q
 
 " Change panel focus with tab
 nnoremap <tab> <c-w><c-w>
@@ -74,11 +75,15 @@ let g:clipboard = {
   \   'cache_enabled': 1,
   \ }
 
+" Insert current path
+nnoremap <leader>path :put =expand('%:h')<CR>
+
 call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-sort-motion'
 Plug 'DataWraith/auto_mkdir'
 Plug 'editorconfig/editorconfig-vim'
+"Plug 'github/copilot.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -93,12 +98,27 @@ Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " Declare CoC extensions
-nnoremap <leader>l :CocFix<CR>
-autocmd ColorScheme * highlight CocErrorFloat ctermfg=White guifg=White
-autocmd ColorScheme * highlight CocWarningFloat ctermfg=White guifg=White
-nmap <silent> gd <Plug>(coc-definition)
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <leader>l <Plug>(coc-codeaction)
+nnoremap <silent><nowait> <leader>d  :<C-u>CocList diagnostics<cr>
 
+autocmd ColorScheme * highlight CocErrorFloat ctermfg=209 guifg=White
+"autocmd ColorScheme * highlight CocWarningFloat ctermfg=White guifg=White
+autocmd ColorScheme * highlight CocFloating ctermbg=237 guibg=DarkGray
+autocmd ColorScheme * highlight CocFloatDividingLine ctermbg=237 guibg=DarkGray
+
+nmap <silent> gd <Plug>(coc-definition)
+
+" Use <c-space> to trigger completion.
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
+
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
@@ -108,14 +128,14 @@ function! s:show_documentation()
     execute '!' . &keywordprg . " " . expand('<cword>')
   endif
 endfunction
+
 let g:coc_global_extensions = [
-  \ 'coc-eslint',
-  \ 'coc-html',
+  \ 'coc-tsserver',
   \ 'coc-json',
-  \ 'coc-snippets',
+  \ 'coc-html',
+  \ 'coc-eslint',
   \ 'coc-styled-components',
   \ 'coc-stylelintplus',
-  \ 'coc-tsserver',
   \ ]
 
 "

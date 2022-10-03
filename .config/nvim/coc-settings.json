@@ -1,4 +1,12 @@
 {
     "stylelintplus.cssInJs": true,
-    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true
+    "typescript.autoClosingTags": true,
+    "typescript.preferences.quoteStyle": "single",
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "javascript.autoClosingTags": true,
+    "javascript.preferences.quoteStyle": "single",
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+
+    "javascript.suggestionActions.enabled": false
 }

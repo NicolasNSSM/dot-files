@@ -48,6 +48,7 @@ yarn global add \
     eslint \
     eslint-plugin-react \
     import-js \
+    neovim \
     stylelint stylelint-config-standard \
     tslint typescript
 

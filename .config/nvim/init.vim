@@ -107,6 +107,9 @@ autocmd ColorScheme * highlight CocFloating ctermbg=237 guibg=DarkGray
 autocmd ColorScheme * highlight CocFloatDividingLine ctermbg=237 guibg=DarkGray
 
 nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gr <Plug>(coc-references)
+nmap <silent> gt <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
 
 " Use <c-space> to trigger completion.
 if has('nvim')
@@ -134,6 +137,7 @@ let g:coc_global_extensions = [
   \ 'coc-json',
   \ 'coc-html',
   \ 'coc-eslint',
+  \ 'coc-phpls',
   \ 'coc-styled-components',
   \ 'coc-stylelintplus',
   \ ]

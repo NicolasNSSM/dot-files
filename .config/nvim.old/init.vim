@@ -28,13 +28,17 @@ autocmd InsertEnter * hi LineNr ctermfg=4 ctermbg=232
 autocmd InsertLeave * hi LineNr ctermfg=59 ctermbg=232
 autocmd VimEnter * PlugUpdate && :q
 
+" Map F1 to escape instead of opening the help screen
+map <F1> <Esc>
+imap <F1> <Esc>
+
 " Change panel focus with tab
 nnoremap <tab> <c-w><c-w>
 
 " Do a grep search on the selected text
 if executable('ag')
-    vmap <leader>f y:Ack! -i "<C-r>""
-    nmap <leader>f :Ack! -i "<C-r><C-w>"
+    vmap <leader>f y:Ack! --hidden -i "<C-r>""
+    nmap <leader>f :Ack! --hidden -i "<C-r><C-w>"
 else
     vmap <leader>f y:grep -r "<C-r>""
     nmap <leader>f :grep -r "<C-r><C-w>"
@@ -59,7 +63,7 @@ nnoremap <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
 
 " Make :grep great again
 if executable('ag')
-    set grepprg=ag\ --group
+    set grepprg=ag\ --hidden\ --group
 endif
 
 let g:clipboard = {
@@ -142,6 +146,8 @@ let g:coc_global_extensions = [
   \ 'coc-stylelintplus',
   \ ]
 
+autocmd FileType css setl iskeyword+=-
+autocmd FileType scss setl iskeyword+=@-@
 "
 " nanotech/jellybeans
 "
@@ -157,13 +163,14 @@ map <leader>lp :LustyJugglePrevious<cr>
 " mileszs/ack.vim
 "
 if executable('ag')
-  let g:ackprg = 'ag --group --vimgrep'
+  let g:ackprg = 'ag --group --hidden --vimgrep'
 endif
 
 "
 " junegunn/fzf.vim
 "
 set rtp+=~/.fzf
+let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 let g:fzf_colors = {
   \ 'fg':      ['fg', 'Normal'],
   \ 'bg':      ['bg', 'Normal'],

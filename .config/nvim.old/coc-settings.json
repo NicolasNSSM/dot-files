@@ -1,0 +1,22 @@
+{
+    "eslint.experimental.useFlatConfig": true,
+    "intelephense.completion.insertUseDeclaration": true,
+    "intelephense.completion.triggerParameterHints": true,
+    "intelephense.diagnostics.undefinedClassConstants": false,
+    "intelephense.diagnostics.undefinedConstants": false,
+    "intelephense.diagnostics.undefinedFunctions": false,
+    "intelephense.diagnostics.undefinedMethods": false,
+    "intelephense.diagnostics.undefinedProperties": false,
+    "intelephense.diagnostics.undefinedTypes": false,
+    "intelephense.telemetry.enabled": false,
+    "intelephense.trace.server": "messages",
+    "javascript.autoClosingTags": true,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+    "javascript.preferences.quoteStyle": "single",
+    "javascript.suggestionActions.enabled": false,
+    "stylelintplus.cssInJs": true,
+    "typescript.autoClosingTags": true,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "typescript.preferences.quoteStyle": "single"
+}
